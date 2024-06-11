@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="enter_to_calculate">Enter To Calculate</string>
+    <string name="c">C</string>
+    <string name="slash">/</string>
+    <string name="star">*</string>
+    <string name="del">Del</string>
+</resources>
