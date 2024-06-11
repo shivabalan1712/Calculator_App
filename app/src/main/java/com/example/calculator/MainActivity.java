@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private TextView textViewResult;
-    private StringBuilder input = new StringBuilder();
+    private final StringBuilder input = new StringBuilder();
     private boolean isLastResult = false;
 
     @Override
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonEqual).setOnClickListener(onClickListener);
     }
 
-    private View.OnClickListener onClickListener = new View.OnClickListener() {
+    private final View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Button button = (Button) v;
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private double evaluateExpression(String expression) throws Exception {
+    private double evaluateExpression(String expression) {
         // This is a simple evaluation method, you can use more sophisticated approaches
         String[] tokens = expression.split("(?<=[-+*/])|(?=[-+*/])");
         double result = Double.parseDouble(tokens[0]);
